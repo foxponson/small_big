@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: #06010e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+header, main, footer, aside {
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+footer {
+  background-color: #0a0918;
+  color: white;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .article-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.05rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .article-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    gap: 2rem;
+    align-items: start;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  .content-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    grid-template-areas: "main aside";
+    align-items: start;
+  }
+
+  main {
+    grid-area: main;
+    text-align: left;
+    margin: 0;
+  }
+
+  aside {
+    grid-area: aside;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  .article-image {
+    width: 180px;
+    height: 180px;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
